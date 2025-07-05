@@ -1,12 +1,41 @@
-# React + Vite
+# 🎯 React Redux Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A beautifully designed Todo application built using **React**, **Redux Toolkit**, and **Tailwind CSS**. It supports adding, editing, deleting, completing, filtering, and searching todos — with **localStorage persistence** and **GitHub Pages deployment**.
 
-Currently, two official plugins are available:
+![Screenshot 2025-07-05 183012](https://github.com/user-attachments/assets/5af2e7aa-6e0b-4dcd-8319-76b33a3df3a6)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
 
-## Expanding the ESLint configuration
+👉 [View the App](https://your-username.github.io/your-repo-name)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features
+
+- ✅ Add, edit, delete todos
+- ✅ Mark as completed
+- ✅ Filter: All / Completed / Pending
+- ✅ Search todos by text
+- ✅ LocalStorage persistence
+- ✅ Responsive UI with custom checkbox
+- ✅ Deployed on GitHub Pages
+
+---
+
+## 📦 Tech Stack
+
+- **React** (with hooks)
+- **Redux Toolkit**
+- **Tailwind CSS**
+- **Vite** (build tool)
+- **React Icons**
+
+---
+
+## 🧠 Getting Started
+
+### Clone the repository:
+
+```bash
+npm install
+npm run dev
