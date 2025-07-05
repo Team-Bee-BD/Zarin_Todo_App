@@ -1,5 +1,6 @@
 import "./App.css";
 import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <div className="relative z-10 max-w-xl mx-auto p-4 text-white">
         <h1 className="text-2xl font-bold mb-4 pt-16">Todo App</h1>
         <TodoForm />
-        <div>Task List</div>
+        <TodoList />
       </div>
     </div>
   );

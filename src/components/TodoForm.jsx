@@ -23,21 +23,17 @@ const TodoForm = () => {
     setText("");
   };
   return (
-    <form
-      onSubmit={handleOnSubmit}
-      className="flex items-center gap-2 mb-4"
-      action=""
-    >
+    <form onSubmit={handleOnSubmit} className="flex items-center gap-2 mb-4">
       <input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Add New Todo"
-        className="flex-1 p-2 border focus:outline-none focus:border-[#ecb593] rounded-md text-black"
+        className="flex-1 p-2 border focus:outline-none focus:border-[#f5788f] rounded-md text-black"
       />
       <button
         type="submit"
-        className="bg-[#f0c6ab] text-white px-6 py-2 rounded hover:bg-[#ecb593]"
+        className="bg-[#F49BAB] text-white px-6 py-2 rounded hover:bg-[#f5788f]"
       >
         Add
       </button>
