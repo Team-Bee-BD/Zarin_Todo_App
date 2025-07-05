@@ -4,10 +4,6 @@ A beautifully designed Todo application built using **React**, **Redux Toolkit**
 
 ![Screenshot 2025-07-05 183012](https://github.com/user-attachments/assets/5af2e7aa-6e0b-4dcd-8319-76b33a3df3a6)
 
-## 🔗 Live Demo
-
-👉 [View the App](https://your-username.github.io/your-repo-name)
-
 ---
 
 ## 🚀 Features
