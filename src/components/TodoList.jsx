@@ -3,16 +3,28 @@ import {
   toggleComplete,
   deleteTodo,
   editTodo,
+  setSearchFilter,
+  setFilterStatus,
 } from "../redux/features/todos/todoSlice";
 import { FaCheck, FaEdit, FaTrash, FaSave } from "react-icons/fa";
 import { useState } from "react";
 
 const TodoList = () => {
-  const { todos } = useSelector((state) => state.todos);
+  const { todos, filter } = useSelector((state) => state.todos);
   const dispatch = useDispatch();
 
   const [editId, setEditId] = useState(null);
   const [editText, setEditText] = useState("");
+
+  const filteredTodos = todos
+    .filter((todo) => {
+      if (filter.status === "completed") return todo.completed;
+      if (filter.status === "pending") return !todo.completed;
+      return true;
+    })
+    .filter((todo) =>
+      todo.text.toLowerCase().includes(filter.search.toLowerCase())
+    );
 
   const handleSave = (id) => {
     if (editText.trim() !== "") {
@@ -24,9 +36,28 @@ const TodoList = () => {
 
   return (
     <div>
+      <input
+        type="text"
+        placeholder="Search Todos"
+        value={filter.search}
+        onChange={(e) => dispatch(setSearchFilter(e.target.value))}
+        className="text-black w-full p-2 border rounded mb-4 focus:outline-none focus:border-[#f5788f]"
+      />
+      <div className="flex gap-4 mb-4">
+        {["all", "completed", "pending"].map((status) => (
+          <button
+            onClick={() => dispatch(setFilterStatus(status))}
+            className={`px-2 py-1 rounded border ${
+              filter.status === status ? "bg-[#f5788f]" : ""
+            }`}
+          >
+            {status.charAt(0).toUpperCase() + status.slice(1)}
+          </button>
+        ))}
+      </div>
       <ul className="space-y-2">
-        {todos.length === 0 && <p>No Todos</p>}
-        {todos.map((todo) => (
+        {filteredTodos.length === 0 && <p>No Todos</p>}
+        {filteredTodos.map((todo) => (
           <li key={todo.id} className="flex items-center justify-between group">
             <label className="flex items-center space-x-2 cursor-pointer">
               <input
